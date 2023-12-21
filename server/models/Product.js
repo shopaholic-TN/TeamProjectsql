@@ -42,8 +42,9 @@ module.exports=(sequelize,DataTypes)=>{
     })
 
     Product.associate=models=>{
-        Product.hasMany(models.User,{
-            onDelete:"cascade"
+        Product.hasMany(models.Card,{
+            onDelete:"cascade",
+           
         })
     }
 
