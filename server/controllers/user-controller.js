@@ -1,3 +1,22 @@
+const db=require('../models/index.js')
+const update=(req,res)=>{
+    db.User.update(req.body,{Where:{id:req.params.body}}).then((result) => {
+        res.status(200).send('user updated')
+    }).catch((err) => {
+        res.status(500).send(err)
+    });
+}
+module.exports.update = update
+
+
+
+
+
+
+
+
+
+
 /* const db=require('./models')
 
 //post user

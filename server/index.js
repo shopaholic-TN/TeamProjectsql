@@ -1,11 +1,19 @@
 const express=require('express')
+const cors =require('cors')
 const app=express()
-//by default the file index will be imported from models and get database from it
+const categoriesRoutes = require('./homeRoutes/categoriesRoutes.js')
+const allProducts=require('./homeRoutes/allProductsRoutes.js')
+const userRoutes = require('./routes/user-routes.js')
 const db=require('./models')
-app.use(express.urlencoded({extended:true}))
 app.use(express.json())
+app.use(cors())
+app.use(express.urlencoded({extended:true}))
 
 
+app.use('/api/categories',categoriesRoutes)
+
+app.use('/api/allProducts',allProducts)
+app.use('/api/users',userRoutes)
 //connect 
 db.sequelize.sync().then(()=>{
     app.listen(3000,()=>{
