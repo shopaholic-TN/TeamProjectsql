@@ -3,5 +3,5 @@ const express = require('express')
 const router = express.Router()
 
 
-router.post('/get',categoriesController.getProductByCategories)
+router.post('/getCategory',categoriesController.getProductByCategories)
 module.exports=router

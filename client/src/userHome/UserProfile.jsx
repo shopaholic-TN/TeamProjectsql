@@ -39,8 +39,8 @@ const saveChanges=()=>{
     password:password
 
   }
-  axios.put("",changes).then((results)=>{
-    console.log(results.data)
+  axios.put("http://localhost:3000/api/users/updateUser/1",changes).then((results)=>{
+    console.log('axios requestpassed successfully!',results.data)
   }).catch((error)=>{
     console.log(error)
   })
@@ -48,8 +48,8 @@ const saveChanges=()=>{
 
     return (
         <div className='UserProfile' >
-          
-        <nav style={{display:'flex',alignItems:'center',justifyContent:'space-between',height:'20%'}}>
+          <Header changeView={changeView} />
+    { /*   <nav style={{display:'flex',alignItems:'center',justifyContent:'space-between',height:'20%'}}>
                 <h2>market</h2>
                 <ul style={{display:'inline-block'}} >
                     <li>home</li>
@@ -67,7 +67,7 @@ const saveChanges=()=>{
                 <AccountCircleIcon/>
                 </div>
 
-    </nav> 
+    </nav> */}
               <div className='list'>
               <List>
         {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (

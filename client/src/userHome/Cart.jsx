@@ -1,10 +1,11 @@
 import React from 'react'
 import {useState} from 'react'
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import Header from './Header.jsx'
+
 import './cart.css'
-export default function Cart (){
+export default function Cart (props){
+  
+  console.log(props.changeView)
     const [products,setProducts]=useState([])
     const [total,setTotal]=useState(0)
     const calculateTotal=(products)=>{
@@ -19,8 +20,8 @@ export default function Cart (){
     }
     return (
         <div className='cart' >
-            
-              <nav style={{display:'flex',alignItems:'center',justifyContent:'space-between'}}>
+            <Header changeView={props.changeView} />
+            {/*  <nav style={{display:'flex',alignItems:'center',justifyContent:'space-between'}}>
                 <h2>market</h2>
                 <ul style={{display:'inline-block'}} >
                     <li>home</li>
@@ -38,7 +39,7 @@ export default function Cart (){
                 <AccountCircleIcon/>
                 </div>
 
-              </nav>
+              </nav>*/}
               <div>
                home/Cart
               </div>

@@ -37,7 +37,7 @@ console.log(changeView)
 
                 <div>
                 <FavoriteBorderIcon onClick={()=>{changeView('wishlist')}} />
-                <AddShoppingCartIcon onClick={()=>{/*goToCart ()*/}} />
+                <AddShoppingCartIcon onClick={()=>{changeView('cart')}} />
                 <PopupState variant="popover" popupId="demo-popup-popover">
         {(popupState) => (
           <div>

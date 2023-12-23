@@ -31,7 +31,19 @@ module.exports=(sequelize,DataTypes)=>{
             
         } 
     });
-
+const user1 = User.create({
+    firstName:'zakaria',
+    lastName:'askri',
+    email:'zakaria@gmail',
+    password:'pass123',
+    address:'tunis',
+    role:'user'
+   
+}).then((data)=>{
+    console.log(data)
+}).catch((err)=>{
+    console.log(err)
+})
     User.associate=models=>{
         
         User.hasMany(models.Product),{
