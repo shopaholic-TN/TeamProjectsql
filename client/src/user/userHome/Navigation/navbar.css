@@ -11,9 +11,9 @@
 }
 
 .logo{
-    margin-left: 120px;
+    margin-left: 90px;
     font-size: 30px; 
-    font-weight: 600;
+    font-weight: 800;
 }
 
 .navBar{
@@ -105,10 +105,12 @@ span{
   .nav-icons {
     width: 1.5rem;
     height: 1.5rem;
-    margin-left: 2rem;
+    margin-left: 5rem;
   }
   
-
+  .span :link{
+    background-color: #000000;
+  }
 
 
 

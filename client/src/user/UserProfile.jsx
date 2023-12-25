@@ -39,7 +39,7 @@ const saveChanges=()=>{
     password:password
 
   }
-  axios.put("http://localhost:3000/api/users/updateUser/1",changes).then((results)=>{
+  axios.put("http://localhost:3001/api/users/updateUser/1",changes).then((results)=>{
     console.log('axios requestpassed successfully!',results.data)
   }).catch((error)=>{
     console.log(error)
@@ -48,7 +48,7 @@ const saveChanges=()=>{
 
     return (
         <div className='UserProfile' >
-          <Header changeView={changeView} />
+          {/* <Header changeView={changeView} /> */}
     { /*   <nav style={{display:'flex',alignItems:'center',justifyContent:'space-between',height:'20%'}}>
                 <h2>market</h2>
                 <ul style={{display:'inline-block'}} >
@@ -68,7 +68,7 @@ const saveChanges=()=>{
                 </div>
 
     </nav> */}
-              <div className='list'>
+              {/* <div className='list'>
               <List>
         {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
           <ListItem key={text} disablePadding>
@@ -94,7 +94,7 @@ const saveChanges=()=>{
           </ListItem>
         ))}
       </List>
-      </div  >
+      </div  > */}
       <div className='profile-content' >
               <div>
                 home/my Account

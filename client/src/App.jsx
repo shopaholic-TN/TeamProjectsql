@@ -1,28 +1,23 @@
 import React from 'react'
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
-import UserHome from './userHome/UserHome.jsx';
-// import Cart from '../userhome/Cart.jsx'
-// import WishList from '../userhome/WishList.jsx'
+import { BrowserRouter,Routes,Route } from 'react-router-dom';
 
+import UserHome from '../src/user/UserHome.jsx'
+//import ProductDet from './user/userHome/Components/SingleProduct/ProductDet.jsx';
 import './App.css';
 function App() {
   return (
     <div className="App">
- < UserHome/>
- { /*<BrowserRouter>
+ 
+<BrowserRouter>
       <Routes>
-        <Route path="/CartUser" element={<Cart />}>
+
+
+        <Route path="/userHome" element={<UserHome/>}>
           
-        </Route>
-        
-        <Route path="/" element={<Header />}>
-
-        </Route>
-        <Route path='/WishListUser' element={<WishList/>}>
-
+       
         </Route>
       </Routes>
-  </BrowserRouter>*/ }
+  </BrowserRouter>
     </div>
   );
 }

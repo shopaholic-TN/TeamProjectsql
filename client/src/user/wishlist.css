@@ -1,0 +1,12 @@
+.cart-table-columns {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  .cart-table-columns img{
+    width:200px;
+    height:180px
+  }

@@ -38,15 +38,40 @@ module.exports=(sequelize,DataTypes)=>{
           productRemise:{
             type:DataTypes.DECIMAL,
             defaultValue:0.0
-        } 
-    })
-    
-    
-   /* Product.associate=models=>{
-        Product.hasMany(models.User,{
-            onDelete:"cascade"
+        },
+
+        todaysProduct:{
+          type:DataTypes.BOOLEAN,
+          defaultValue: false 
+        }, 
+        
+        thisMonthProduct:{
+          type:DataTypes.BOOLEAN,
+          defaultValue: false 
+        }, 
+        createdAt: {
+            type: DataTypes.DATE,
+            allowNull: false,
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+          },
+          updatedAt: {
+            type: DataTypes.DATE,
+            allowNull: false,
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+          },
+
+       
+
+
+    },{timeStamps: false})
+
+    Product.associate=models=>{
+        Product.hasMany(models.Card,{
+            onDelete:"cascade",
+           
         })
     }
-*/
+
     return Product
 }
+
