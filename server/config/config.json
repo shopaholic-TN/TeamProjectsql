@@ -1,21 +1,21 @@
 {
   "development": {
     "username": "root",
-    "password": "root",
+    "password": "10519970",
     "database": "market",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "root",
+    "password": "10519970",
     "database": "market",
     "host": "localhost",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
-    "password": "root",
+    "password": "10519970",
     "database": "market",
     "host": "localhost",
     "dialect": "mysql"
