@@ -1,9 +1,11 @@
 import React from "react";
 import "./ProductDet.css";
 import {useState} from 'react'
+import axios from 'axios'
 function ProductDet(props) {
   const setCard = props.setCard
   const selected=props.selected
+  const card =props.card
   const [quantity,setQuantity]=useState(1)
   const addToCart = (product)=>{
     const productToPost={

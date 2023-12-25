@@ -1,7 +1,7 @@
 import {React,useState} from 'react'
 import NavBar from './userHome/Navigation/NavBar.jsx'
 import Home from './userHome/Home.jsx'
-
+import ProductDet from './userHome/Components/SingleProduct/ProductDet.jsx'
  import UserProfile from './UserProfile.jsx'
  import Cart from './Cart.jsx'
 import WishList from './WishList.jsx'
@@ -44,5 +44,5 @@ import WishList from './WishList.jsx'
     }
     else if (view==='single'){
         return <ProductDet/>
-    })
+    }
  }
