@@ -30,7 +30,7 @@ module.exports=(sequelize,DataTypes)=>{
             type: DataTypes.ENUM('user', 'admin', 'seller')
             
         } 
-    });
+    },{ timestamps: false });
 
     User.associate=models=>{
             

@@ -22,7 +22,7 @@ module.exports=(sequelize,DataTypes)=>{
         } 
      
 
-    })
+    },{ timestamps: false })
 
     WishList.associate=models=>{
         WishList.belongsTo(models.User,{

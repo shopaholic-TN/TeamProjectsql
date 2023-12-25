@@ -39,7 +39,7 @@ module.exports=(sequelize,DataTypes)=>{
             type:DataTypes.DECIMAL,
             defaultValue:0.0
         } 
-    })
+    },{ timestamps: false })
 
     Product.associate=models=>{
         Product.hasMany(models.Card,{
