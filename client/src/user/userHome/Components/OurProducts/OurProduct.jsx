@@ -17,7 +17,7 @@ const setWished=props.setWished
 
 const fetchAllProducts=async()=>{
 
-    const res=await axios.get('http://localhost:3001/home/ourProducts') 
+    const res=await axios.get('http://localhost:3000/home/ourProducts') 
     console.log(res.data)
     setOurProducts(res.data)
 }
@@ -33,7 +33,7 @@ const fetchAllProducts=async()=>{
             UserId:product.UserId,
             ProductId:product.id
         }
-        axios.post(`http://localhost:3001/api/addToCard/1/${product.id}`,productToPost).then((result)=>{
+        axios.post(`http://localhost:3000/api/addToCard/1/${product.id}`,productToPost).then((result)=>{
             setCard(result.data)
             console.log(result.data)
             
@@ -50,11 +50,15 @@ const fetchAllProducts=async()=>{
         wishListImage:produit.productImage,
         UserId:produit.UserId
         }
-        axios.post(`http://localhost:3001/api/wishList/${produit.UserId}`,produitToPost).then((results)=>{
+        axios.post(`http://localhost:3000/api/wishList/${produit.UserId}`,produitToPost).then((results)=>{
             console.log(results.data)
         }).catch((err)=>{
             console.log('err:',err.message)
         })
+       }
+       const renderSingle=(view,product)=>{
+            props.changeView(view)
+            props.setSelected(product)
        }
     return (
 <div>
@@ -71,7 +75,7 @@ const fetchAllProducts=async()=>{
                 return(
                     <div class="cardp" key={i}>
                         <FavoriteBorderIcon  onClick={()=>{addToWishedList(el)}}/>
-                    <img src={el.productImage.url} alt="Product Image"/>
+                    <img src={el.productImage.url} alt="Product Image" onClick={()=>renderSingle('single',el)}/>
                     <div class="card-contentp">
                     <div class="card-titlep">{el.productName}</div>
                     <div class="card-descriptionp">{el.productDescription}</div>

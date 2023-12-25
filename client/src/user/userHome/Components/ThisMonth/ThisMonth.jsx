@@ -57,6 +57,10 @@ const fetchMonthProducts=async()=>{
             console.log('err:',err.message)
         })
        }
+       const renderSingle=(view,product)=>{
+        props.changeView(view)
+        props.setSelected(product)
+   }
     return (
 <div>
                 <hr className='horizantalLine'/>
@@ -72,7 +76,7 @@ const fetchMonthProducts=async()=>{
                 return(
                     <div class="cardp" key={i}>
                         <FavoriteBorderIcon onClick={()=>{addToWishedList(el)}}/>
-                    <img src={el.productImage.url} alt="Product Image"/>
+                    <img src={el.productImage.url} alt="Product Image"  onClick={()=>renderSingle('single',el)}/>
                     <div class="card-contentp">
                     <div class="card-titlep">{el.productName}</div>
                     <div class="card-descriptionp">{el.productDescription}</div>

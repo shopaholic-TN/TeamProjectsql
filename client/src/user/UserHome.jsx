@@ -10,6 +10,7 @@ import WishList from './WishList.jsx'
      const [view,setView]=useState('home')
      const [card,setCard]=useState([])
      const [wished,setWished]=useState([])
+    const [selected,setSelected]=useState({})
      console.log("widhed",wished);
      const changeView=(v)=>{
      setView(v)
@@ -19,7 +20,7 @@ import WishList from './WishList.jsx'
      return <div>
      
      
-    <Home changeView={changeView} wished={wished} setWished={setWished}  card={card} setCard={setCard}/>
+    <Home setSelected={setSelected} changeView={changeView} wished={wished} setWished={setWished}  card={card} setCard={setCard}/>
      </div>
     }
     else   if(view==='profile'){
@@ -41,4 +42,7 @@ import WishList from './WishList.jsx'
          <Cart card={card} setCard={setCard}  changeView={changeView} />
          </div>
     }
+    else if (view==='single'){
+        return <ProductDet/>
+    })
  }

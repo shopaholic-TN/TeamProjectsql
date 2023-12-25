@@ -14,15 +14,15 @@ function Home(props) {
   const setCard=props.setCard
   const wished=props.wished
   const setWished=props.setWished
-  
+ const  setSelected=props.setSelected
     return (
        <div>
         <NavBar changeView={changeView} />
        { /*<Sidebar/>*/}
-        <TodaysProduct  wished={wished} setWished={setWished}  card={card} setCard={setCard}/>
-        <Categories  wished={wished} setWished={setWished}  card={card} setCard={setCard}/>
-        <ThisMonth  wished={wished} setWished={setWished}  card={card} setCard={setCard}/>
-        <OurProduct   wished={wished} setWished={setWished}  card={card} setCard={setCard}/>
+        <TodaysProduct  setSelected={ setSelected}  wished={wished} setWished={setWished}  card={card} setCard={setCard}/>
+        <Categories    wished={wished} setWished={setWished}  card={card} setCard={setCard}/>
+        <ThisMonth  setSelected={ setSelected}  wished={wished} setWished={setWished}  card={card} setCard={setCard}/>
+        <OurProduct  setSelected={ setSelected}   wished={wished} setWished={setWished}  card={card} setCard={setCard}/>
         <NewArrival/>
          <Footer/>  
        </div>
