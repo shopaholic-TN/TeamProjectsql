@@ -1,0 +1,36 @@
+
+.footer-company-name{
+    margin-bottom: 0px;
+    text-align: center;
+    margin-bottom: 0px;
+    color: aliceblue;
+}
+
+.footer-distributed {
+    background-color: #000000;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 15 px sans-serif;
+    margin-top: 80px;
+    bottom: 0;
+    padding-top: 30px;
+}
+
+.footerList{
+    display: flex;
+}
+.list{
+    color: rgb(255, 255, 255);
+    margin-left: 70px;
+  
+}
+
+
+
+
+
+
+
+
+
