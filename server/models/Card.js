@@ -1,4 +1,5 @@
 module.exports=(sequelize,DataTypes)=>{
+
     const Card=sequelize.define('Card',{
         productName:{
             type:DataTypes.STRING,
@@ -9,6 +10,9 @@ module.exports=(sequelize,DataTypes)=>{
             allowNull:false
         }
     })
+
+    const Card=sequelize.define('Card',{})
+
     
     Card.associate=models=>{
         Card.belongsTo(models.Product,{
